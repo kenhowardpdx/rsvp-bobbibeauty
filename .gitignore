@@ -1,0 +1,12 @@
+.vscode
+
+*.log
+
+node_modules
+typings/**/*.d.ts
+!typings/tsd.d.ts
+
+src/**/*.js
+src/**/*.js.map
+
+config.json

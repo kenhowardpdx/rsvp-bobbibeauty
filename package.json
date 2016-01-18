@@ -2,8 +2,15 @@
   "name": "rsvp-bobbibeauty",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
+  "engines": [
+    {
+      "node": ">=4"
+    }
+  ],
   "scripts": {
+    "start": "node src/app.js",
+    "postinstall": "tsd reinstall --overwrite && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,12 +23,19 @@
     "url": "https://github.com/kenhowardpdx/rsvp-bobbibeauty/issues"
   },
   "homepage": "https://github.com/kenhowardpdx/rsvp-bobbibeauty#readme",
-  "devDependencies": {
-    "cz-conventional-changelog": "^1.1.5"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.3.6",
+    "nconf": "^0.8.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5",
+    "tsd": "^0.6.5",
+    "typescript": "^1.7.5"
   }
 }
